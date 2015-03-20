@@ -109,7 +109,7 @@ public class IdentityIntMap {
   public final int get(Object key)
   {
     int prime = _prime;
-    int hash = System.identityHashCode(key) % prime;
+    int hash = Math.abs(System.identityHashCode(key)) % prime;
     // int hash = key.hashCode() & mask;
 
     final Object []keys = _keys;
